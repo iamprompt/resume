@@ -66,10 +66,12 @@ const App = () => {
             <hr />
             <ul className="text-left list-disc pl-8">
               {technologies.map((tech) => (
-                <li className="flex">
-                  <HideToggle />
-                  <span className="w-40 shrink-0">{tech.section}:</span>
-                  <span>{Array.isArray(tech.details) ? tech.details.join(', ') : tech.details}</span>
+                <li>
+                  <div className="flex">
+                    <HideToggle />
+                    <span className="w-40 shrink-0">{tech.section}:</span>
+                    <span>{Array.isArray(tech.details) ? tech.details.join(', ') : tech.details}</span>
+                  </div>
                 </li>
               ))}
             </ul>

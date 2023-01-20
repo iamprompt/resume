@@ -102,6 +102,11 @@ export const projects: Array<{
   url?: string
 }> = [
   {
+    name: 'MUICT Open House 2022 Activity Web Application',
+    details:
+      'A website for MUICT Open House 2022 event registration using NextJS, TailwindCSS, NodeJS, ExpressJS, and LINE Front-end Framework (LIFF)',
+  },
+  {
     name: 'Enhanced Disney+ Hotstar Chrome Extension',
     details: 'A Chrome extension to enhance Disney+ Hotstar experience by changing subtitle style',
     url: 'chrome.google.com/webstore/detail/enhanced-disney+-hotstar/ggonogpephoeedoopcdnhnfdlaoeiben',

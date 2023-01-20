@@ -7,7 +7,11 @@ module.exports = {
     fontFamily: {
       sans: ['Inter', ...fontFamily.sans],
     },
-    extend: {},
+    extend: {
+      screens: {
+        print: { raw: 'print' },
+      },
+    },
   },
   plugins: [],
 }

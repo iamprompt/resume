@@ -1,3 +1,77 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+main {
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: underline;
+}
+
+.hide-toggle {
+  @apply text-gray-700 underline;
+}
+
+section {
+  @apply my-4;
+}
+
+section h2 {
+  @apply font-semibold;
+}
+
+section hr {
+  @apply mt-0 mb-2;
+  border-color: darkgrey;
+}
+
+.print-only {
+  display: none;
+}
+
+main.display-mode .hide-toggle {
+  display: none;
+}
+
+@media print {
+  * {
+    @apply text-sm;
+  }
+
+  .print-only {
+    display: inherit;
+  }
+
+  .web-only {
+    display: none;
+  }
+
+  ul {
+    @apply pl-6;
+  }
+
+  section {
+    @apply my-2;
+  }
+
+  section hr {
+    @apply mt-0 mb-1;
+  }
+
+  main {
+    margin: 0 0;
+    padding: 0;
+  }
+}
+
+.work-experience {
+  @apply my-4;
+}
+
+@media print {
+  .work-experience {
+    @apply my-1;
+  }
+}

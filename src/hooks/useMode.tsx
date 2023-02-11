@@ -1,11 +1,12 @@
-import { createContext, FC, ReactNode, useContext, useState } from 'react'
+import type { FC, ReactNode } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 export enum MODE {
   EDIT = 'edit',
   PREVIEW = 'preview',
 }
 
-type IModeContext = {
+interface IModeContext {
   mode: MODE
   setMode: (mode: MODE) => void
   toggleMode: () => void
@@ -13,7 +14,7 @@ type IModeContext = {
 
 const defaultModeContext = {
   mode: MODE.PREVIEW,
-  setMode: (mode: MODE) => {
+  setMode: (_mode: MODE) => {
     throw new Error('setMode must be implemented')
   },
   toggleMode: () => {

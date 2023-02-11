@@ -1,71 +1,39 @@
 import clsx from 'clsx'
-import { useState } from 'react'
 import {
   educations,
   honors,
   interests,
   introData,
   projects,
-  sourceLink,
   technologies,
   workExperiences,
 } from './data'
 import { HideToggle } from './HideToggle'
-import { Intro } from './Intro'
-import { Work } from './Work'
+import { MODE, useMode } from './hooks/useMode'
+import { Header } from './components/Header'
+import { Intro } from './sections/Intro'
+import { Work } from './sections/Work'
+import { SectionHeader } from './sections/SectionHeader'
 
 const App = () => {
-  const [editMode, setEditMode] = useState(false)
-
-  function toggleMode() {
-    setEditMode(!editMode)
-  }
+  const { mode } = useMode()
 
   return (
     <>
-      <header className="web-only w-screen bg-green-400 p-4 text-center text-white sm:p-6">
-        <h1 className="text-4xl">Resumette</h1>
-        <h3>
-          <button onClick={toggleMode} className="text-lg underline">
-            {editMode ? '[View]' : '[Edit]'}
-          </button>
-          <button onClick={() => window.print()} className="text-lg underline">
-            [Print]
-          </button>
-        </h3>
-        <p>
-          Printer-friendly standard résumé, any HTML tags with{' '}
-          <code>web-only</code> CSS class will be hidden on print.
-        </p>
-        <p>
-          You can toggle{' '}
-          <button onClick={toggleMode} className="underline">
-            [Edit Mode]
-          </button>{' '}
-          to hide some sections before printing.
-        </p>
-        (
-        <a href={sourceLink} target="_blank" rel="noopener">
-          Source
-        </a>
-        )
-      </header>
-
+      <Header />
       <main
         className={clsx(
           `m-0 max-w-screen-xl space-y-4 p-4 text-center md:m-8 xl:mx-auto print:space-y-3`,
-          editMode ? 'edit-mode' : 'display-mode'
+          mode === MODE.EDIT && 'edit-mode',
+          mode === MODE.PREVIEW && 'display-mode'
         )}
       >
         <Intro {...introData} />
 
         {technologies.length > 0 ? (
           <section>
-            <HideToggle />
-            <h2 className="text-left text-2xl uppercase">
-              Technologies and Languages
-            </h2>
-            <hr />
+            <SectionHeader title="Technologies and Languages" />
+
             <ul className="list-disc pl-8 text-left">
               {technologies.map((tech) => (
                 <li>
@@ -86,9 +54,7 @@ const App = () => {
 
         {educations.length > 0 ? (
           <section>
-            <HideToggle />
-            <h2 className="text-left text-2xl uppercase">Education</h2>
-            <hr />
+            <SectionHeader title="Educations" />
 
             <ul className="list-disc pl-8 text-left">
               {educations.map((education) => (
@@ -105,9 +71,7 @@ const App = () => {
 
         {workExperiences.length > 0 ? (
           <section>
-            <HideToggle />
-            <h2 className="text-left text-2xl uppercase">Work Experience</h2>
-            <hr />
+            <SectionHeader title="Work Experiences" />
 
             {workExperiences.map((work) => (
               <Work {...work} />
@@ -117,9 +81,7 @@ const App = () => {
 
         {honors.length > 0 ? (
           <section>
-            <HideToggle />
-            <h2 className="text-left text-2xl uppercase">Honors / Awards</h2>
-            <hr />
+            <SectionHeader title="Honors / Awards" />
 
             {honors.map((honor) => (
               <div>
@@ -138,9 +100,7 @@ const App = () => {
 
         {projects.length > 0 ? (
           <section>
-            <HideToggle />
-            <h2 className="text-left text-2xl uppercase">Projects</h2>
-            <hr />
+            <SectionHeader title="Projects" />
 
             <ul className="list-disc pl-8 text-left">
               {projects.map((project) => (

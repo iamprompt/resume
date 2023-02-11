@@ -75,3 +75,7 @@ main.display-mode .hide-toggle {
     @apply my-1;
   }
 }
+
+@page {
+  size: A4;
+}

@@ -20,7 +20,15 @@ export const technologies: Array<{
 }> = [
   {
     section: 'Languages',
-    details: ['JavaScript', 'NodeJS', 'TypeScript', 'SQL', 'Python', 'Java', 'C'],
+    details: [
+      'JavaScript',
+      'NodeJS',
+      'TypeScript',
+      'SQL',
+      'Python',
+      'Java',
+      'C',
+    ],
   },
   {
     section: 'Frameworks',
@@ -37,11 +45,25 @@ export const technologies: Array<{
   },
   {
     section: 'Development Tools',
-    details: ['Git', 'Docker', 'Firebase', 'Vercel', 'CloudFlare', 'GitHub Actions', 'GitLab CI/CD'],
+    details: [
+      'Git',
+      'Docker',
+      'Firebase',
+      'Vercel',
+      'CloudFlare',
+      'GitHub Actions',
+      'GitLab CI/CD',
+    ],
   },
   {
     section: 'Productivity Tools',
-    details: ['Notion', 'Figma', 'Airtable', 'Microsoft 365', 'Google Workspace'],
+    details: [
+      'Notion',
+      'Figma',
+      'Airtable',
+      'Microsoft 365',
+      'Google Workspace',
+    ],
   },
 ]
 
@@ -109,7 +131,8 @@ export const projects: Array<{
   },
   {
     name: 'Enhanced Disney+ Hotstar Chrome Extension',
-    details: 'A Chrome extension to enhance Disney+ Hotstar experience by changing subtitle style',
+    details:
+      'A Chrome extension to enhance Disney+ Hotstar experience by changing subtitle style',
     url: 'chrome.google.com/webstore/detail/enhanced-disney+-hotstar/ggonogpephoeedoopcdnhnfdlaoeiben',
   },
 ]

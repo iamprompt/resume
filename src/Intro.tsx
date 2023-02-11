@@ -1,6 +1,6 @@
-import { FC } from 'react'
+import type { FC } from 'react'
 
-type IntroProps = {
+interface IntroProps {
   name: string
   nickname: string
   phone: string
@@ -11,10 +11,19 @@ type IntroProps = {
   linkedin: string
 }
 
-export const Intro: FC<IntroProps> = ({ name, nickname, phone, email, location, github, website, linkedin }) => {
+export const Intro: FC<IntroProps> = ({
+  name,
+  nickname,
+  phone,
+  email,
+  location,
+  github,
+  website,
+  linkedin,
+}) => {
   return (
-    <div className="flex flex-wrap flex-col sm:flex-row print:flex-row text-sm sm:text-base">
-      <div className="flex-1 text-left sm:py-4 w-48">
+    <div className="flex flex-col flex-wrap text-sm sm:flex-row sm:text-base print:flex-row">
+      <div className="w-48 flex-1 text-left sm:py-4">
         <p>
           <a href={`tel:${phone}`}>{phone}</a>
         </p>
@@ -24,14 +33,18 @@ export const Intro: FC<IntroProps> = ({ name, nickname, phone, email, location, 
         <p>{location}</p>
       </div>
 
-      <h2 className="flex-none order-first sm:order-none print:order-none text-4xl font-bold sm:text-2xl md:text-3xl lg:text-6xl text-center p-4 print:pt-0">
+      <h2 className="order-first flex-none p-4 text-center text-4xl font-bold sm:order-none sm:text-2xl md:text-3xl lg:text-6xl print:order-none print:pt-0">
         {name}
-        <span className="block -mt-1 text-base lg:text-lg">({nickname})</span>
+        <span className="-mt-1 block text-base lg:text-lg">({nickname})</span>
       </h2>
 
-      <div className="flex-1 text-left sm:text-right print:text-right sm:py-4 w-48 text-sm sm:text-base">
+      <div className="w-48 flex-1 text-left text-sm sm:py-4 sm:text-right sm:text-base print:text-right">
         <p>
-          <a href={`https://github.com/${github}`} target="_blank" rel="noreferrer">
+          <a
+            href={`https://github.com/${github}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             github.com/{github}
           </a>
         </p>
@@ -41,7 +54,11 @@ export const Intro: FC<IntroProps> = ({ name, nickname, phone, email, location, 
           </a>
         </p>
         <p>
-          <a href={`https://linkedin.com/in/${linkedin}`} target="_blank" rel="noreferrer">
+          <a
+            href={`https://linkedin.com/in/${linkedin}`}
+            target="_blank"
+            rel="noreferrer"
+          >
             Linkedin
           </a>
         </p>

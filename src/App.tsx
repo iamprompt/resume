@@ -2,14 +2,13 @@ import clsx from 'clsx'
 import { useState } from 'react'
 import {
   educations,
-  fullVersionLink,
+  honors,
   interests,
   introData,
   projects,
   sourceLink,
   technologies,
   workExperiences,
-  honors,
 } from './data'
 import { HideToggle } from './HideToggle'
 import { Intro } from './Intro'
@@ -24,18 +23,19 @@ const App = () => {
 
   return (
     <>
-      <header className="web-only text-center p-4 sm:p-6 bg-green-400 text-white w-screen">
+      <header className="web-only w-screen bg-green-400 p-4 text-center text-white sm:p-6">
         <h1 className="text-4xl">Resumette</h1>
         <h3>
-          <button onClick={toggleMode} className="underline text-lg">
+          <button onClick={toggleMode} className="text-lg underline">
             {editMode ? '[View]' : '[Edit]'}
           </button>
-          <button onClick={() => window.print()} className="underline text-lg">
+          <button onClick={() => window.print()} className="text-lg underline">
             [Print]
           </button>
         </h3>
         <p>
-          Printer-friendly standard résumé, any HTML tags with <code>web-only</code> CSS class will be hidden on print.
+          Printer-friendly standard résumé, any HTML tags with{' '}
+          <code>web-only</code> CSS class will be hidden on print.
         </p>
         <p>
           You can toggle{' '}
@@ -53,7 +53,7 @@ const App = () => {
 
       <main
         className={clsx(
-          `text-center p-4 m-0 md:m-8 xl:mx-auto max-w-screen-xl space-y-4 print:space-y-3`,
+          `m-0 max-w-screen-xl space-y-4 p-4 text-center md:m-8 xl:mx-auto print:space-y-3`,
           editMode ? 'edit-mode' : 'display-mode'
         )}
       >
@@ -62,15 +62,21 @@ const App = () => {
         {technologies.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Technologies and Languages</h2>
+            <h2 className="text-left text-2xl uppercase">
+              Technologies and Languages
+            </h2>
             <hr />
-            <ul className="text-left list-disc pl-8">
+            <ul className="list-disc pl-8 text-left">
               {technologies.map((tech) => (
                 <li>
                   <div className="flex">
                     <HideToggle />
                     <span className="w-40 shrink-0">{tech.section}:</span>
-                    <span>{Array.isArray(tech.details) ? tech.details.join(', ') : tech.details}</span>
+                    <span>
+                      {Array.isArray(tech.details)
+                        ? tech.details.join(', ')
+                        : tech.details}
+                    </span>
                   </div>
                 </li>
               ))}
@@ -81,10 +87,10 @@ const App = () => {
         {educations.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Education</h2>
+            <h2 className="text-left text-2xl uppercase">Education</h2>
             <hr />
 
-            <ul className="text-left list-disc pl-8">
+            <ul className="list-disc pl-8 text-left">
               {educations.map((education) => (
                 <li>
                   <HideToggle />
@@ -100,7 +106,7 @@ const App = () => {
         {workExperiences.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Work Experience</h2>
+            <h2 className="text-left text-2xl uppercase">Work Experience</h2>
             <hr />
 
             {workExperiences.map((work) => (
@@ -112,7 +118,7 @@ const App = () => {
         {honors.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Honors / Awards</h2>
+            <h2 className="text-left text-2xl uppercase">Honors / Awards</h2>
             <hr />
 
             {honors.map((honor) => (
@@ -120,7 +126,7 @@ const App = () => {
                 <div className="flex font-bold">
                   <div className="flex-1 text-left">{honor.name}</div>
                 </div>
-                <ul className="text-left list-disc pl-8 print:pl-6">
+                <ul className="list-disc pl-8 text-left print:pl-6">
                   {honor.details.map((detail) => (
                     <li>{detail}</li>
                   ))}
@@ -133,10 +139,10 @@ const App = () => {
         {projects.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Projects</h2>
+            <h2 className="text-left text-2xl uppercase">Projects</h2>
             <hr />
 
-            <ul className="text-left list-disc pl-8">
+            <ul className="list-disc pl-8 text-left">
               {projects.map((project) => (
                 <li>
                   <HideToggle />
@@ -144,7 +150,11 @@ const App = () => {
                   {project.url ? (
                     <>
                       <br />
-                      <a href={`https://${project.url}`} target="_blank" rel="noreferrer">
+                      <a
+                        href={`https://${project.url}`}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <strong>{project.url}</strong>
                       </a>
                     </>
@@ -158,10 +168,10 @@ const App = () => {
         {interests.length > 0 ? (
           <section>
             <HideToggle />
-            <h2 className="text-2xl uppercase text-left">Interests</h2>
+            <h2 className="text-left text-2xl uppercase">Interests</h2>
             <hr />
 
-            <ul className="text-left list-disc pl-8">
+            <ul className="list-disc pl-8 text-left">
               {interests.map((interest) => (
                 <li key={interest}>
                   <HideToggle />

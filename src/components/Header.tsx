@@ -6,8 +6,8 @@ export const Header = () => {
   return (
     <div className="web-only mx-auto max-w-screen-xl p-4">
       <header className="w-full rounded-xl border border-blue-600 bg-blue-50 p-4 text-center text-black sm:p-6">
-        <h1 className="text-4xl font-bold">iamPrompt Résumé</h1>
-        <h3>
+        <h1 className="mb-4 text-4xl font-bold">iamPrompt Résumé</h1>
+        <h3 className="mb-2">
           <button onClick={toggleMode} className="text-lg underline">
             {mode === MODE.EDIT ? '[View]' : '[Edit]'}
           </button>

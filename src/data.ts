@@ -1,3 +1,12 @@
+import type {
+  Education,
+  Honors,
+  Interests,
+  Project,
+  Technology,
+  Work,
+} from './types'
+
 export const fullVersionLink = 'https://resume.narze.live'
 export const sourceLink = 'https://github.com/narze/resume'
 export const ogImageUrl =
@@ -14,10 +23,7 @@ export const introData = {
   website: '',
 }
 
-export const technologies: Array<{
-  section: string
-  details: string[] | string
-}> = [
+export const technologies: Array<Technology> = [
   {
     section: 'Languages',
     details: [
@@ -67,23 +73,14 @@ export const technologies: Array<{
   },
 ]
 
-export const educations: Array<{
-  head: string
-  details: string
-}> = [
+export const educations: Array<Education> = [
   {
     head: 'B.Sc. Information and Communication Technology (Software Engineering)',
     details: 'Mahidol University, TH. Expected 2023 (GPA 3.79)',
   },
 ]
 
-export const workExperiences: Array<{
-  position: string
-  company: string
-  url?: string
-  years: string[]
-  details: string[]
-}> = [
+export const workExperiences: Array<Work> = [
   {
     position: 'Web Developer',
     company: 'Show No Limit',
@@ -118,11 +115,7 @@ export const workExperiences: Array<{
   },
 ]
 
-export const projects: Array<{
-  name: string
-  details: string
-  url?: string
-}> = [
+export const projects: Array<Project> = [
   {
     name: 'MUICT Open House 2022 Activity Web Application',
     details:
@@ -137,10 +130,7 @@ export const projects: Array<{
   },
 ]
 
-export const honors: Array<{
-  name: string
-  details: string[]
-}> = [
+export const honors: Array<Honors> = [
   {
     name: 'LINE Hack 2020 Winner (1st Place in Student Category)',
     details: [
@@ -149,4 +139,4 @@ export const honors: Array<{
   },
 ]
 
-export const interests: Array<string> = []
+export const interests: Array<Interests> = []

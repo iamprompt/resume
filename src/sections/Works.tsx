@@ -1,4 +1,6 @@
 import type { FC } from 'react'
+import type { Work as IWork } from '../types'
+import { SectionHeader } from './SectionHeader'
 
 interface WorkProps {
   position: string
@@ -8,7 +10,7 @@ interface WorkProps {
   details: string[]
 }
 
-export const Work: FC<WorkProps> = ({
+const WorkItem: FC<WorkProps> = ({
   position,
   company,
   url,
@@ -36,5 +38,21 @@ export const Work: FC<WorkProps> = ({
         ))}
       </ul>
     </div>
+  )
+}
+
+export const WorkSection: FC<{ data: IWork[] }> = ({ data = [] }) => {
+  if (!data.length) {
+    return null
+  }
+
+  return (
+    <section>
+      <SectionHeader title="Work Experiences" />
+
+      {data.map((work) => (
+        <WorkItem {...work} />
+      ))}
+    </section>
   )
 }

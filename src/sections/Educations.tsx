@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { HideToggle } from '../HideToggle'
+import { HideToggle } from '../components/HideToggle'
 import type { Education } from '../types'
 import { SectionHeader } from './SectionHeader'
 

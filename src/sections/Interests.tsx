@@ -1,5 +1,5 @@
 import type { FC } from 'react'
-import { HideToggle } from '../HideToggle'
+import { HideToggle } from '../components/HideToggle'
 import type { Interests } from '../types'
 
 export const InterestsSection: FC<{ data: Interests[] }> = ({ data = [] }) => {

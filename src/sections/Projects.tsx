@@ -14,7 +14,7 @@ export const ProjectsSection: FC<{ data: Project[] }> = ({ data = [] }) => {
 
       <ul className="list-disc pl-8 text-left">
         {data.map((project) => (
-          <li>
+          <li key={`project-${project.name}`}>
             <HideToggle />
             <strong>{project.name}</strong> - {project.details}{' '}
             {project.url ? (

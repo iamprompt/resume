@@ -18,10 +18,10 @@ export const TechnologiesSection: FC<Props> = ({ data = [] }) => {
 
       <ul className="list-disc pl-8 text-left">
         {data.map((tech) => (
-          <li>
-            <div className="flex">
+          <li key={`tech-${tech.section}`}>
+            <div className="flex flex-col gap-x-3 sm:flex-row">
               <HideToggle />
-              <span className="w-40 shrink-0">{tech.section}:</span>
+              <span className="w-40 shrink-0 font-bold">{tech.section}:</span>
               <span>
                 {Array.isArray(tech.details)
                   ? tech.details.join(', ')

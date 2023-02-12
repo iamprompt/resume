@@ -33,8 +33,8 @@ const WorkItem: FC<WorkProps> = ({
         <div className="flex-1 text-right">{years.join(' - ')}</div>
       </div>
       <ul className="list-disc pl-8 text-left print:pl-6">
-        {details.map((detail) => (
-          <li>{detail}</li>
+        {details.map((detail, i) => (
+          <li key={`work-${position}-${company}-${i}`}>{detail}</li>
         ))}
       </ul>
     </div>
@@ -51,7 +51,7 @@ export const WorkSection: FC<{ data: IWork[] }> = ({ data = [] }) => {
       <SectionHeader title="Work Experiences" />
 
       {data.map((work) => (
-        <WorkItem {...work} />
+        <WorkItem key={`work-${work.position}-${work.company}`} {...work} />
       ))}
     </section>
   )

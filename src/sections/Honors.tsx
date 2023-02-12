@@ -12,13 +12,13 @@ export const HonorsSection: FC<{ data: Honors[] }> = ({ data = [] }) => {
       <SectionHeader title="Honors / Awards" />
 
       {data.map((honor) => (
-        <div>
+        <div key={`honor-${honor.name}`}>
           <div className="flex font-bold">
             <div className="flex-1 text-left">{honor.name}</div>
           </div>
           <ul className="list-disc pl-8 text-left print:pl-6">
-            {honor.details.map((detail) => (
-              <li>{detail}</li>
+            {honor.details.map((detail, i) => (
+              <li key={`honor-${honor.name}-${i}`}>{detail}</li>
             ))}
           </ul>
         </div>

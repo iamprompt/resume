@@ -15,7 +15,7 @@ export const InterestsSection: FC<{ data: Interests[] }> = ({ data = [] }) => {
 
       <ul className="list-disc pl-8 text-left">
         {data.map((interest) => (
-          <li key={interest}>
+          <li key={`interest-${interest}`}>
             <HideToggle />
             {interest}
           </li>

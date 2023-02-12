@@ -27,11 +27,11 @@ export const technologies: Array<Technology> = [
   {
     section: 'Languages',
     details: [
+      'TypeScript',
       'JavaScript',
       'NodeJS',
-      'TypeScript',
-      'SQL',
       'Python',
+      'SQL',
       'Java',
       'C',
     ],
@@ -39,11 +39,11 @@ export const technologies: Array<Technology> = [
   {
     section: 'Frameworks',
     details: [
-      'ReactJS',
       'NextJS',
+      'ReactJS',
       'TailwindCSS',
-      'VueJS',
       'NuxtJS',
+      'VueJS',
       'ExpressJS',
       'LINE Front-end Framework (LIFF)',
       'LINE Messaging API',
@@ -59,6 +59,7 @@ export const technologies: Array<Technology> = [
       'CloudFlare',
       'GitHub Actions',
       'GitLab CI/CD',
+      'Google Cloud Build',
     ],
   },
   {
@@ -67,8 +68,8 @@ export const technologies: Array<Technology> = [
       'Notion',
       'Figma',
       'Airtable',
-      'Microsoft 365',
-      'Google Workspace',
+      'Microsoft 365 (Word, Excel, PowerPoint)',
+      'Google Workspace (Docs, Sheets, Slides)',
     ],
   },
 ]

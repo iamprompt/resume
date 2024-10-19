@@ -28,7 +28,7 @@ const App = () => {
       <Header />
       <main
         className={clsx(
-          `max-w-screen-xl m-0 space-y-4 p-4 text-center md:m-8 xl:mx-auto print:space-y-3`,
+          `m-0 max-w-7xl space-y-4 p-4 text-center md:m-8 xl:mx-auto print:space-y-3`,
           mode === MODE.EDIT && 'edit-mode',
           mode === MODE.PREVIEW && 'display-mode',
         )}

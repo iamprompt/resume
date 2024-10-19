@@ -6,7 +6,7 @@ export const Header = () => {
   const { mode, toggleMode } = useMode()
 
   return (
-    <div className="web-only max-w-screen-xl mx-auto p-4">
+    <div className="web-only mx-auto max-w-7xl p-4">
       <header className="w-full rounded-xl border border-blue-600 bg-blue-50 p-4 text-center text-black sm:p-6">
         <h1 className="mb-4 text-4xl font-bold">iamPrompt Résumé</h1>
         <h3 className="mb-2">

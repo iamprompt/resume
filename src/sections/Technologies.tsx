@@ -17,20 +17,24 @@ export const TechnologiesSection: FC<Props> = ({ data = [] }) => {
     <section>
       <SectionHeader title="Technologies and Languages" />
 
-      <ul className="list-disc pl-8 text-left">
-        {data.map((tech) => (
-          <li key={`tech-${tech.section}`}>
-            <div className="flex flex-col gap-x-3 sm:flex-row">
-              <HideToggle />
-              <span className="w-40 shrink-0 font-bold">{tech.section}:</span>
-              <span>
-                {Array.isArray(tech.details)
-                  ? tech.details.join(', ')
-                  : tech.details}
+      <ul className="text-left">
+        {data.map((tech) => {
+          const details = Array.isArray(tech.details)
+            ? tech.details.join(', ')
+            : tech.details
+
+          return (
+            <li key={`tech-${tech.section}`}>
+              <span className="flex items-baseline">
+                <div className="flex w-40 shrink-0 flex-col items-start font-bold">
+                  {tech.section}:
+                </div>
+                <span className="flex-1">{details}</span>
+                <HideToggle level={2} />
               </span>
-            </div>
-          </li>
-        ))}
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

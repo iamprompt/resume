@@ -16,7 +16,7 @@ export const EducationsSection: FC<{ data: Education[] }> = ({ data = [] }) => {
       <ul className="list-disc pl-8 text-left">
         {data.map((education) => (
           <li key={`education-${education.head}`}>
-            <HideToggle />
+            <HideToggle className="mr-2" />
             <strong>{education.head}</strong>
             <br />
             {education.details}

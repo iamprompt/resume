@@ -1,5 +1,7 @@
 import type { FC } from 'react'
 
+import { getUrl, getUrlText } from '@/utills/string'
+
 interface IntroProps {
   name: string
   nickname: string
@@ -21,6 +23,9 @@ export const Intro: FC<IntroProps> = ({
   website,
   linkedin,
 }) => {
+  const websiteUrl = getUrl(website)
+  const websiteText = getUrlText(website)
+
   return (
     <div className="text-sm sm:text-base">
       <h2 className="w-full flex-none p-4 text-center text-4xl font-bold sm:order-none lg:text-6xl print:pt-0">
@@ -49,18 +54,20 @@ export const Intro: FC<IntroProps> = ({
               github.com/{github}
             </a>
           </p>
-          <p>
-            <a href={`https://${website}`} target="_blank" rel="noreferrer">
-              {website}
-            </a>
-          </p>
+          {websiteUrl && websiteText ? (
+            <p>
+              <a href={websiteUrl} target="_blank" rel="noreferrer">
+                {websiteText}
+              </a>
+            </p>
+          ) : null}
           <p>
             <a
               href={`https://linkedin.com/in/${linkedin}`}
               target="_blank"
               rel="noreferrer"
             >
-              Linkedin
+              linkedin.com/in/{linkedin}
             </a>
           </p>
         </div>

@@ -22,7 +22,7 @@ const WorkItem: FC<WorkProps> = ({
     <div className="work-experience">
       <div className="mb-2 flex font-bold print:mb-1">
         <div className="flex-1 text-left">{position}</div>
-        <div className="flex-0">
+        <div className="flex-0 whitespace-nowrap">
           {url ? (
             <a href={url} target="_blank" rel="noreferrer">
               {company}

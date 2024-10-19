@@ -20,7 +20,7 @@ export const introData = {
   github: 'iamprompt',
   linkedin: 'iamprompt',
   location: 'Bangkok, Thailand',
-  website: '',
+  website: 'https://iamprompt.me',
 }
 
 export const technologies: Array<Technology> = [
@@ -39,14 +39,16 @@ export const technologies: Array<Technology> = [
   {
     section: 'Frameworks',
     details: [
-      'NextJS',
-      'ReactJS',
+      'LINE Front-end Framework (LIFF)',
+      'LINE Messaging API',
+      'Next.js',
+      'React.js',
       'TailwindCSS',
+      'NestJS',
+      'ElysiaJS',
       'NuxtJS',
       'VueJS',
       'ExpressJS',
-      'LINE Front-end Framework (LIFF)',
-      'LINE Messaging API',
     ],
   },
   {
@@ -56,7 +58,7 @@ export const technologies: Array<Technology> = [
       'Docker',
       'Firebase',
       'Vercel',
-      'CloudFlare',
+      'Cloudflare',
       'GitHub Actions',
       'GitLab CI/CD',
       'Google Cloud Build',
@@ -77,16 +79,23 @@ export const technologies: Array<Technology> = [
 export const educations: Array<Education> = [
   {
     head: 'B.Sc. Information and Communication Technology (Software Engineering)',
-    details: 'Mahidol University, TH. Expected 2023 (GPA 3.79)',
+    details: 'Mahidol University, TH (GPA 3.80 - First Class Honors)',
   },
 ]
 
 export const workExperiences: Array<Work> = [
   {
+    position: 'Full-stack Developer',
+    company: 'Abbon Corporation',
+    url: 'https://abbon.co.th',
+    years: ['2024', 'Present'],
+    details: [],
+  },
+  {
     position: 'Web Developer',
     company: 'Show No Limit',
     url: 'https://beartai.com',
-    years: ['2022', 'Present'],
+    years: ['2022', '2023'],
     details: [
       'Developed a movie catalog website using NextJS, TailwindCSS, NodeJS, ExpressJS, and PayloadCMS',
       'Created a WordPress plugin to customize RSS feed and REST API to integrate with other services',
@@ -121,13 +130,13 @@ export const projects: Array<Project> = [
     name: 'MUICT Open House 2022 Activity Web Application',
     details:
       'A website for MUICT Open House 2022 event registration using NextJS, TailwindCSS, NodeJS, ExpressJS, and LINE Front-end Framework (LIFF)',
-    url: 'github.com/iamprompt/muict-openhouse-2022',
+    url: 'https://github.com/iamprompt/muict-openhouse-2022',
   },
   {
     name: 'Enhanced Disney+ Hotstar Chrome Extension',
     details:
       'A Chrome extension to enhance Disney+ Hotstar experience by changing subtitle style',
-    url: 'chrome.google.com/webstore/detail/enhanced-disney+-hotstar/ggonogpephoeedoopcdnhnfdlaoeiben',
+    url: 'https://chrome.google.com/webstore/detail/enhanced-disney+-hotstar/ggonogpephoeedoopcdnhnfdlaoeiben',
   },
 ]
 

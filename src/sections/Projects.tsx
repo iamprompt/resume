@@ -15,22 +15,39 @@ export const ProjectsSection: FC<{ data: Project[] }> = ({ data = [] }) => {
     <section>
       <SectionHeader title="Projects" />
 
-      <ul className="list-disc pl-8 text-left">
+      <ul className="list-disc space-y-2 pl-8 text-left">
         {data.map((project) => {
-          const url = getUrl(project.url)
-          const urlText = getUrlText(project.url)
-
           return (
             <li key={`project-${project.name}`}>
-              <HideToggle />
-              <strong>{project.name}</strong> - {project.details}{' '}
-              {url ? (
-                <>
-                  <br />
-                  <a href={url} target="_blank" rel="noreferrer">
-                    <strong>{urlText}</strong>
-                  </a>
-                </>
+              <HideToggle className="mr-1" />
+              <strong>{project.name}</strong>
+              {project.tagline ? ` - ${project.tagline}` : null}
+              {project.details ? (
+                <div className="text-sm">{project.details}</div>
+              ) : null}
+              {project.links && project.links.length > 0 ? (
+                <ul>
+                  {project.links.map(([linkName, linkUrl]) => {
+                    const url = getUrl(linkUrl)
+                    const text = getUrlText(linkUrl)
+
+                    if (!url || !text) {
+                      return null
+                    }
+
+                    return (
+                      <li
+                        key={`${project.name}-${linkName}`}
+                        className="text-sm"
+                      >
+                        <span className="font-bold">{linkName}</span> -{' '}
+                        <a href={url} target="_blank" rel="noopener noreferrer">
+                          {text}
+                        </a>
+                      </li>
+                    )
+                  })}
+                </ul>
               ) : null}
             </li>
           )

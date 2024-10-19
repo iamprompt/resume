@@ -2,6 +2,7 @@ import type {
   Education,
   Honors,
   Interests,
+  Intro,
   Project,
   Technology,
   Work,
@@ -12,16 +13,19 @@ export const sourceLink = 'https://github.com/narze/resume'
 export const ogImageUrl =
   'https://og-image.vercel.app/Resumette.png?theme=light&md=1&fontSize=200px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fvercel-triangle-black.svg'
 
-export const introData = {
+export const introData: Intro = {
   name: 'Supakarn Laorattanakul',
   nickname: 'Prompt',
   phone: '',
   email: 'wearedprompt@gmail.com',
-  github: 'iamprompt',
-  linkedin: 'iamprompt',
   location: 'Bangkok, Thailand',
-  website: 'https://iamprompt.me',
-}
+  links: [
+    ['GitHub', 'https://github.com/iamprompt'],
+    ['LinkedIn', 'https://linkedin.com/in/iamprompt'],
+    // ['Website', 'https://iamprompt.me'],
+    ['Medium', 'https://iamprompt.medium.com'],
+  ],
+} as const
 
 export const technologies: Array<Technology> = [
   {
@@ -127,16 +131,43 @@ export const workExperiences: Array<Work> = [
 
 export const projects: Array<Project> = [
   {
-    name: 'MUICT Open House 2022 Activity Web Application',
+    name: 'Flex Render',
+    tagline: 'NPM Package for rendering LINE Flex Message in HTML',
+    links: [
+      ['GitHub', 'https://github.com/iamprompt/flex-render'],
+      ['Medium', 'https://medium.com/linedevth/03f7b2610203'],
+    ],
+  },
+  {
+    name: 'Sawasdee Studio',
+    tagline: 'LIFF App for sending custom LINE Flex Message to friends',
+    links: [
+      ['GitHub', 'https://github.com/iamprompt/line-sawasdee'],
+      ['Medium', 'https://medium.com/linedevth/0a53ab1b781c'],
+      ['App', 'https://line-sawasdee.iamprompt.me'],
+    ],
+  },
+  {
+    name: 'MUICT Open House 2022',
+    tagline: 'LINE Integration for Open House Attendee Registration',
     details:
-      'A website for MUICT Open House 2022 event registration using NextJS, TailwindCSS, NodeJS, ExpressJS, and LINE Front-end Framework (LIFF)',
-    url: 'https://github.com/iamprompt/muict-openhouse-2022',
+      'MUICT Open House 2022 Event Registration LIFF Application using NextJS, TailwindCSS, NodeJS, ExpressJS, LINE Messaging API, and LINE Front-end Framework (LIFF)',
+    links: [
+      ['GitHub', 'https://github.com/iamprompt/muict-openhouse-2022'],
+      ['Medium', 'https://iamprompt.medium.com/bfd676c1feb7'],
+    ],
   },
   {
     name: 'Enhanced Disney+ Hotstar Chrome Extension',
     details:
       'A Chrome extension to enhance Disney+ Hotstar experience by changing subtitle style',
-    url: 'https://chrome.google.com/webstore/detail/enhanced-disney+-hotstar/ggonogpephoeedoopcdnhnfdlaoeiben',
+    links: [
+      ['GitHub', 'https://github.com/iamprompt/enhanced-dhs-chrome-ext'],
+      [
+        'Chrome Web Store',
+        'https://chromewebstore.google.com/detail/ggonogpephoeedoopcdnhnfdlaoeiben',
+      ],
+    ],
   },
 ]
 

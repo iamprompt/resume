@@ -1,6 +1,10 @@
 import { useState } from 'react'
 
-export const HideToggle = () => {
+type HideToggleProps = {
+  className?: string
+}
+
+export const HideToggle = ({ className }: HideToggleProps) => {
   const [hide, setHide] = useState(false)
 
   function hideToggle(e: React.MouseEvent<HTMLButtonElement>) {
@@ -15,7 +19,10 @@ export const HideToggle = () => {
   }
 
   return (
-    <button className="hide-toggle web-only" onClick={hideToggle}>
+    <button
+      className={`hide-toggle web-only ${className}`}
+      onClick={hideToggle}
+    >
       {hide ? '[Show]' : '[Hide]'}
     </button>
   )

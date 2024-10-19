@@ -1,3 +1,12 @@
+export interface Intro {
+  name: string
+  nickname: string
+  phone: string
+  email: string
+  location: string
+  links?: Array<[string, string]>
+}
+
 export interface Technology {
   section: string
   details: string[] | string
@@ -18,8 +27,9 @@ export interface Work {
 
 export interface Project {
   name: string
-  details: string
-  url?: string
+  tagline?: string
+  details?: string
+  links?: Array<[string, string]>
 }
 
 export interface Honors {

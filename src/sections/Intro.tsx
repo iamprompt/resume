@@ -8,9 +8,7 @@ interface IntroProps {
   phone: string
   email: string
   location: string
-  github: string
-  website: string
-  linkedin: string
+  links?: Array<[string, string]>
 }
 
 export const Intro: FC<IntroProps> = ({
@@ -19,13 +17,8 @@ export const Intro: FC<IntroProps> = ({
   phone,
   email,
   location,
-  github,
-  website,
-  linkedin,
+  links,
 }) => {
-  const websiteUrl = getUrl(website)
-  const websiteText = getUrlText(website)
-
   return (
     <div className="text-sm sm:text-base">
       <h2 className="w-full flex-none p-4 text-center text-4xl font-bold sm:order-none lg:text-6xl print:pt-0">
@@ -43,34 +36,26 @@ export const Intro: FC<IntroProps> = ({
           </p>
           <p>{location}</p>
         </div>
+        {links && links.length > 0 ? (
+          <ul className="w-48 flex-1 text-left text-sm sm:py-4 sm:text-right sm:text-base print:text-right">
+            {links.map(([linkName, linkUrl]) => {
+              const url = getUrl(linkUrl)
+              const urlText = getUrlText(linkUrl)
 
-        <div className="w-48 flex-1 text-left text-sm sm:py-4 sm:text-right sm:text-base print:text-right">
-          <p>
-            <a
-              href={`https://github.com/${github}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              github.com/{github}
-            </a>
-          </p>
-          {websiteUrl && websiteText ? (
-            <p>
-              <a href={websiteUrl} target="_blank" rel="noreferrer">
-                {websiteText}
-              </a>
-            </p>
-          ) : null}
-          <p>
-            <a
-              href={`https://linkedin.com/in/${linkedin}`}
-              target="_blank"
-              rel="noreferrer"
-            >
-              linkedin.com/in/{linkedin}
-            </a>
-          </p>
-        </div>
+              if (!url || !urlText) {
+                return null
+              }
+
+              return (
+                <li key={`link-${linkName}`}>
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {urlText}
+                  </a>
+                </li>
+              )
+            })}
+          </ul>
+        ) : null}
       </div>
     </div>
   )

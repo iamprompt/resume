@@ -94,7 +94,10 @@ export const workExperiences: Array<Work> = [
     company: 'Abbon Corporation',
     url: 'https://abbon.co.th',
     years: ['2024', 'Present'],
-    details: [],
+    details: [
+      'Developed a web application integrated with LINE Front-end Framework (LIFF) for LINE Connect service registration with ReactJS, TailwindCSS, and ViteJS',
+      'Built a marketing platform focused on LINE Beacon service, LINE Official Notifications, and LINE Messaging API with NextJS, TailwindCSS, NestJS, Firebase, and PostgreSQL',
+    ],
   },
   {
     position: 'Web Developer',

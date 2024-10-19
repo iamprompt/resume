@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+
 import type { Work as IWork } from '../types'
 import { SectionHeader } from './SectionHeader'
 

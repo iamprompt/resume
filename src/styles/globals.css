@@ -1,6 +1,9 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import 'tailwindcss';
+@config '../../tailwind.config.ts';
+
+@theme {
+  --font-family-sans: 'Inter', sans-serif;
+}
 
 main {
   overflow-x: hidden;

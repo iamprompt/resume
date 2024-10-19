@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+
 import { HideToggle } from '../components/HideToggle'
 import type { Project } from '../types'
 import { SectionHeader } from './SectionHeader'

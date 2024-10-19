@@ -1,4 +1,5 @@
 import type { FC } from 'react'
+
 import type { Honors } from '../types'
 import { SectionHeader } from './SectionHeader'
 

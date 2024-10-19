@@ -69,6 +69,10 @@ export const technologies: Array<Technology> = [
     ],
   },
   {
+    section: 'Testing Tools',
+    details: ['Cypress', 'Jest', 'Playwright', 'Puppeteer'],
+  },
+  {
     section: 'Productivity Tools',
     details: [
       'Notion',
@@ -177,7 +181,16 @@ export const projects: Array<Project> = [
 
 export const honors: Array<Honors> = [
   {
+    name: 'LINE API Expert',
+    issuer: 'LY Corporation (formerly LINE Corporation)',
+    years: ['2023', 'Present'],
+    details: [
+      'Support the LINE Developers Community in Thailand by sharing knowledge and experience in LINE API and services',
+    ],
+  },
+  {
     name: 'LINE Hack 2020 Winner (1st Place in Student Category)',
+    issuer: 'LINE Thailand',
     details: [
       'Developed a LINE Chatbot to help group gathering using LINE Front-end Framework (LIFF) and LINE Messaging API with NuxtJS, NodeJS, and Firebase',
     ],

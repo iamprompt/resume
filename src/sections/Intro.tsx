@@ -1,4 +1,4 @@
-import type { FC } from 'react'
+import { type FC } from 'react'
 
 import { getUrl, getUrlText } from '@/utills/string'
 
@@ -21,9 +21,9 @@ export const Intro: FC<IntroProps> = ({
 }) => {
   return (
     <div className="text-sm sm:text-base">
-      <h2 className="w-full flex-none p-4 text-center text-4xl font-bold sm:order-none lg:text-6xl print:pt-0">
+      <h2 className="w-full flex-none p-4 text-center !text-4xl font-bold sm:order-none lg:text-6xl print:pt-0">
         {name}
-        <span className="-mt-1 block text-base lg:text-lg">({nickname})</span>
+        <span className="-mt-1 block !text-base lg:text-lg">({nickname})</span>
       </h2>
 
       <div className="flex flex-row flex-wrap gap-x-5">

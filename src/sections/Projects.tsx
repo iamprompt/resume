@@ -15,7 +15,7 @@ export const ProjectsSection: FC<{ data: Project[] }> = ({ data = [] }) => {
     <section>
       <SectionHeader title="Projects" />
 
-      <ul className="list-disc space-y-2 pl-8 text-left">
+      <ul className="list-disc pl-8 text-left">
         {data.map((project) => {
           return (
             <li key={`project-${project.name}`}>

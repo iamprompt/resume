@@ -34,6 +34,8 @@ export interface Project {
 
 export interface Honors {
   name: string
+  years?: string[]
+  issuer?: string
   details: string[]
 }
 

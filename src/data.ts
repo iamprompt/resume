@@ -74,6 +74,7 @@ export const technologies: Array<Technology> = [
       'Notion',
       'Figma',
       'Airtable',
+      'Jira',
       'Microsoft 365 (Word, Excel, PowerPoint)',
       'Google Workspace (Docs, Sheets, Slides)',
     ],

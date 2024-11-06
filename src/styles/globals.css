@@ -39,6 +39,10 @@ main.display-mode .hide-toggle {
 }
 
 @media print {
+  html {
+    @apply text-xs;
+  }
+
   * {
     @apply text-sm;
   }

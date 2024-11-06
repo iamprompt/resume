@@ -97,7 +97,7 @@ export const workExperiences: Array<Work> = [
     position: 'Full-stack Developer',
     company: 'Abbon Corporation',
     url: 'https://abbon.co.th',
-    years: ['2023', 'Present'],
+    years: ['Apr 2023', 'Present'],
     details: [
       'Developed a web application integrated with LINE Front-end Framework (LIFF) for LINE Connect service registration with ReactJS, TailwindCSS, and ViteJS',
       'Built a marketing platform focused on LINE Beacon service, LINE Official Notifications, and LINE Messaging API with NextJS, TailwindCSS, NestJS, Firebase, and PostgreSQL',
@@ -107,7 +107,7 @@ export const workExperiences: Array<Work> = [
     position: 'Web Developer',
     company: 'Show No Limit',
     url: 'https://beartai.com',
-    years: ['2022', '2023'],
+    years: ['Mar 2022', 'Apr 2023'],
     details: [
       'Developed a movie catalog website using NextJS, TailwindCSS, NodeJS, ExpressJS, and PayloadCMS',
       'Created a WordPress plugin to customize RSS feed and REST API to integrate with other services',
@@ -118,7 +118,7 @@ export const workExperiences: Array<Work> = [
     position: 'Intern Software Engineer',
     company: 'Skooldio',
     url: 'https://skooldio.com',
-    years: ['2021'],
+    years: ['Jun 2021', 'Jul 2021'],
     details: [
       'Developed a website for course recommendation system using ViteJS with ReactJS, Material UI, and NestJS',
       'Migrated project to specific project monorepo with NX and CI/CD pipeline in Google Cloud Build',
@@ -129,7 +129,7 @@ export const workExperiences: Array<Work> = [
     position: 'Freelance Technology Content Writer',
     company: 'Show No Limit',
     url: 'https://beartai.com',
-    years: ['2015', 'Present'],
+    years: ['Oct 2015', 'Present'],
     details: [
       'Wrote tips and tricks, tutorial, and technology-related articles for Beartai.com',
       'Summarized and translated interesting technology news for Thai readers',

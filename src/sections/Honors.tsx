@@ -14,12 +14,15 @@ export const HonorsSection: FC<{ data: Honors[] }> = ({ data = [] }) => {
 
       {data.map((honor) => (
         <div key={`honor-${honor.name}`}>
-          <div className="flex font-bold">
-            <div className="flex-1 text-left">
+          <div className="flex items-baseline justify-between">
+            <div className="flex-1 text-left font-bold">
               {honor.name}
               <span className="text-sm font-normal">
                 {honor.issuer ? ` by ${honor.issuer}` : ''}
               </span>
+            </div>
+            <div className="text-right font-bold">
+              {honor.years?.join(' - ')}
             </div>
           </div>
           <ul className="list-disc pl-8 text-left print:pl-6">

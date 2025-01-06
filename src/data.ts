@@ -56,17 +56,26 @@ export const technologies: Array<Technology> = [
     ],
   },
   {
-    section: 'Development Tools',
+    section: 'Databases',
+    details: ['PostgreSQL', 'MySQL', 'MongoDB', 'Firebase'],
+  },
+  {
+    section: 'Cloud Services',
     details: [
-      'Git',
-      'Docker',
-      'Firebase',
+      'GCP (Google Cloud Platform) - Cloud Run, Cloud Functions, Cloud Storage, Dialogflow',
+      'Firebase - Cloud Functions, Cloud Storage, Cloud Firestore, Realtime Database, Authentication, and Hosting',
+      'AWS (Amazon Web Services) - S3, CloudFront, Lambda, and SQS',
       'Vercel',
-      'Cloudflare',
-      'GitHub Actions',
-      'GitLab CI/CD',
-      'Google Cloud Build',
+      'Cloudflare - Workers, Pages, KV, D1, and Zero Trust',
     ],
+  },
+  {
+    section: 'DevOps',
+    details: ['Docker', 'GitHub Actions', 'GitLab CI/CD', 'Google Cloud Build'],
+  },
+  {
+    section: 'Development Tools',
+    details: ['Git', 'Visual Studio Code', 'Postman', 'Apidog', 'Swagger'],
   },
   {
     section: 'Testing Tools',
@@ -81,7 +90,13 @@ export const technologies: Array<Technology> = [
       'Jira',
       'Microsoft 365 (Word, Excel, PowerPoint)',
       'Google Workspace (Docs, Sheets, Slides)',
+      'Lucidchart',
+      'Draw.io',
     ],
+  },
+  {
+    section: 'Other Skills',
+    details: ['Team Management', 'Project Management', 'Technical Writing'],
   },
 ]
 
@@ -140,7 +155,8 @@ export const workExperiences: Array<Work> = [
 export const projects: Array<Project> = [
   {
     name: 'Flex Render',
-    tagline: 'NPM Package for rendering LINE Flex Message in HTML',
+    tagline:
+      'NPM Package for rendering LINE Flex Message in HTML, React, and Vue',
     links: [
       ['GitHub', 'https://github.com/iamprompt/flex-render'],
       ['Medium', 'https://medium.com/linedevth/03f7b2610203'],
@@ -150,9 +166,8 @@ export const projects: Array<Project> = [
     name: 'Sawasdee Studio',
     tagline: 'LIFF App for sending custom LINE Flex Message to friends',
     links: [
-      ['GitHub', 'https://github.com/iamprompt/line-sawasdee'],
       ['Medium', 'https://medium.com/linedevth/0a53ab1b781c'],
-      ['App', 'https://line-sawasdee.iamprompt.me'],
+      ['App', 'https://sawasdee-studio.iamprompt.me'],
     ],
   },
   {
@@ -183,7 +198,7 @@ export const honors: Array<Honors> = [
   {
     name: 'LINE API Expert',
     issuer: 'LY Corporation (formerly LINE Corporation)',
-    years: ['2023', 'Present'],
+    years: ['Sep 2023', 'Present'],
     details: [
       'Support the LINE Developers Community in Thailand by sharing knowledge and experience in LINE API and services',
     ],
@@ -191,6 +206,7 @@ export const honors: Array<Honors> = [
   {
     name: 'LINE Hack 2020 Winner (1st Place in Student Category)',
     issuer: 'LINE Thailand',
+    years: ['2020'],
     details: [
       'Developed a LINE Chatbot to help group gathering using LINE Front-end Framework (LIFF) and LINE Messaging API with NuxtJS, NodeJS, and Firebase',
     ],

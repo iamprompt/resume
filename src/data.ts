@@ -22,7 +22,7 @@ export const introData: Intro = {
   links: [
     ['GitHub', 'https://github.com/iamprompt'],
     ['LinkedIn', 'https://linkedin.com/in/iamprompt'],
-    // ['Website', 'https://iamprompt.me'],
+    ['Website', 'https://iamprompt.me'],
     ['Medium', 'https://iamprompt.medium.com'],
   ],
 } as const
@@ -49,10 +49,12 @@ export const technologies: Array<Technology> = [
       'React.js',
       'TailwindCSS',
       'NestJS',
+      'Socket.IO',
       'ElysiaJS',
       'NuxtJS',
       'VueJS',
       'ExpressJS',
+
     ],
   },
   {
@@ -62,11 +64,11 @@ export const technologies: Array<Technology> = [
   {
     section: 'Cloud Services',
     details: [
-      'GCP (Google Cloud Platform) - Cloud Run, Cloud Functions, Cloud Storage, Dialogflow',
-      'Firebase - Cloud Functions, Cloud Storage, Cloud Firestore, Realtime Database, Authentication, and Hosting',
-      'AWS (Amazon Web Services) - S3, CloudFront, Lambda, and SQS',
+      'GCP (Google Cloud Platform)',
+      'Firebase',
+      'AWS (Amazon Web Services)',
       'Vercel',
-      'Cloudflare - Workers, Pages, KV, D1, and Zero Trust',
+      'Cloudflare',
     ],
   },
   {
@@ -88,8 +90,8 @@ export const technologies: Array<Technology> = [
       'Figma',
       'Airtable',
       'Jira',
-      'Microsoft 365 (Word, Excel, PowerPoint)',
-      'Google Workspace (Docs, Sheets, Slides)',
+      'Microsoft 365',
+      'Google Workspace',
       'Lucidchart',
       'Draw.io',
     ],
@@ -116,6 +118,7 @@ export const workExperiences: Array<Work> = [
     details: [
       'Developed a web application integrated with LINE Front-end Framework (LIFF) for LINE Connect service registration with ReactJS, TailwindCSS, and ViteJS',
       'Built a marketing platform focused on LINE Beacon service, LINE Official Notifications, and LINE Messaging API with NextJS, TailwindCSS, NestJS, Firebase, and PostgreSQL',
+      'Created a real-time chat application using WebSocket and LINE Messaging API with ReactJS, TailwindCSS, and NestJS'
     ],
   },
   {
@@ -144,7 +147,7 @@ export const workExperiences: Array<Work> = [
     position: 'Freelance Technology Content Writer',
     company: 'Show No Limit',
     url: 'https://beartai.com',
-    years: ['Oct 2015', 'Present'],
+    years: ['Oct 2015', 'Sep 2024'],
     details: [
       'Wrote tips and tricks, tutorial, and technology-related articles for Beartai.com',
       'Summarized and translated interesting technology news for Thai readers',
